@@ -62,13 +62,13 @@ function analyzeSalesData(data, options) {
   // @TODO: Проверка наличия опций
 
   if (!options || typeof options !== "object") {
-    throw new Error("Не переданны опции");
+    throw new Error("Опции не переданы");
   }
 
   const { calculateRevenue, calculateBonus } = options;
 
   if (!calculateRevenue || !calculateBonus) {
-    throw new Error("Чего-то не хватает");
+    throw new Error("Не переданы функции расчёта");
   }
 
   // @TODO: Подготовка промежуточных данных для сбора статистики
